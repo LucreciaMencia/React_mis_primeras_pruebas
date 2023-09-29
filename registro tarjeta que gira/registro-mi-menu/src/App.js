@@ -4,7 +4,7 @@ import {useState} from 'react';
 
 function App() {
 
-  const [volteada, setVolteada] = useState(false)
+  const [volteada, setVolteada] = useState(true)
 
   return (
     <div className="App">
@@ -12,8 +12,9 @@ function App() {
         <button type="button" class="btn btn-outline-primary" onClick={() => setVolteada(true)}>Restaurante</button>
         <button type="button" class="btn btn-outline-primary" onClick={() => setVolteada(false)}>Comensal</button>
       </div>
-      
+      <div>
       <TarjetaFlip volteada={volteada}/>
+      </div>
     </div>
   );
 }

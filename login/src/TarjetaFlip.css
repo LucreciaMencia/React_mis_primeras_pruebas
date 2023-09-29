@@ -1,10 +1,8 @@
-.tarjeta-flip-container {
+/* .tarjeta-flip-container {
     perspective: 1000px;
-}
+} */
 
 .tarjeta-flip {
-    width: 500px;
-    height: 200px;
     position: relative;
     transform-style: preserve-3d;
     transition: transform 2s;

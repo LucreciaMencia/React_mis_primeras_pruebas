@@ -8,10 +8,11 @@
 }
 
 .form_container{
-    width: 30%;
+    width: 500px;
+    height: 500px;
 }
 
-@media screen and (max-width: 1000px) {
+/* @media screen and (max-width: 1000px) {
     .form_container{
         width: 45%;
     }
@@ -21,4 +22,4 @@
     .form_container{
         width: 65%;
     }
-}
+} */

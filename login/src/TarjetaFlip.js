@@ -1,25 +1,31 @@
-import FormularioRegistroComensal from "./FormularioRegistroComensal";
-import './TarjetaFlip.css'
+import FormularioRegistroComensal from './FormularioRegistroComensal';
+import FormularioRegistroestaurante from './FormularioRegistroestaurante';
+import './TarjetaFlip.css';
+import { useState } from 'react';
 
 
 export default function TarjetaFlip(props) {
-    const volteada = props.volteada;
+    const [esRestaurante, setEsRestaurante] = useState(true)
 
     let clasesDeTarjeta = 'tarjeta-flip';
 
-    if (volteada) {
+    if (esRestaurante) {
         clasesDeTarjeta = 'tarjeta-flip is-flipped'
     }
 
     return (
-        <div class="tarjeta-flip-container">
+        <div className="tarjeta-flip-container ">
             <div className={clasesDeTarjeta}>
-                <div class="tarjeta-flip-front">
-                    <h1>COMENSAL</h1>
+                <div className="form_container p-5 rounded custom-bg tarjeta-flip-front">
+                    <FormularioRegistroComensal/>
                 </div>
-                <div class="tarjeta-flip-back">
-                    <h1>RESTAURANTE</h1> 
+                <div className="form_container p-5 rounded custom-bg tarjeta-flip-back">
+                    <FormularioRegistroestaurante/>
                 </div>
+            </div>
+            <div style={{ margin: '15px' }}>
+                <button type="button" className="btn btn-outline-primary" onClick={() => setEsRestaurante(true)}>Restaurante</button>
+                <button type="button" className="btn btn-outline-primary" onClick={() => setEsRestaurante(false)}>Comensal</button>
             </div>
         </div>
     );

@@ -14,11 +14,9 @@ export default function TarjetaFlip(props) {
         <div class="card-container">
             <div className={clasesDeTarjeta}>
                 <div class="card-front">
-                    <h1>COMENSAL</h1>
                     <FormularioRegistroComensal/>
                 </div>
                 <div class="card-back">
-                    <h1>RESTAURANTE</h1>
                     <FormularioRegistroRestaurante/>
                 </div>
             </div>

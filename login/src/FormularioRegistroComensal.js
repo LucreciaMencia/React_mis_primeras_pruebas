@@ -1,31 +1,30 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default function FormularioRegistroComensal(){
+export default function FormularioRegistroComensal() {
 
-    class EssayForm extends React.Component {
-        constructor(props) {
-          super(props);
-          this.state = {      value: 'Please write an essay about your favorite DOM element.'    };
-          this.handleChange = this.handleChange.bind(this);
-          this.handleSubmit = this.handleSubmit.bind(this);
-        }
-      
-        handleChange(event) {    this.setState({value: event.target.value});  }
-        handleSubmit(event) {
-          alert('An essay was submitted: ' + this.state.value);
-          event.preventDefault();
-        }
-      
-        render() {
-          return (
-            <form onSubmit={this.handleSubmit}>
-              <label>
-                Essay:
-                <textarea value={this.state.value} onChange={this.handleChange} />        </label>
-              <input type="submit" value="Submit" />
+    return (
+            <form>
+                <h3 className='text-center'>Registrarme</h3>
+                <div className='mb-2'>
+                    <label htmlFor='fname'>Primer Nombre</label>
+                    <input type="text" placeholder='Ingrese primer nombre' className='form-control'></input>
+                </div>
+                <div className='mb-2'>
+                    <label htmlFor='lname'>Apellido</label>
+                    <input type="text" placeholder='Ingrese apellido' className='form-control'></input>
+                </div>
+                <div className='mb-2'>
+                    <label htmlFor='password'>Contraseña</label>
+                    <input type="password" placeholder='Ingrese contraseña' className='form-control'></input>
+                </div>
+                <div className='d-grid mt-2'>
+                    <button className='btn btn-outline-secondary'>Registrarme</button>
+                </div>
+                <p className='text-end mt-2'>
+                    Ya tengo cuenta.<Link to="/" className='ms-2'>Iniciar Sesión</Link>
+                </p>
             </form>
-          );
-        }
-      }
+    );
 
 }
