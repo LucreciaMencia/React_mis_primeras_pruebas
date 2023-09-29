@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './Estilos.css'
 
 function SignupRestaurante() {
     return (
-        <div className='login template d-flex justify-content-center align-items-center vh-100 bg-white'>
+        <div className='login template d-flex justify-content-center align-items-center bg-white'>
             <div className='form_container p-5 rounded custom-bg'>
                 <form>
                     <h3 className='text-center'>Registrarme</h3>
@@ -48,7 +49,6 @@ function SignupRestaurante() {
                     <p className='text-end mt-2'>
                         Ya tengo cuenta.<Link to="/iniciar-sesion" className='ms-2'>Iniciar Sesión</Link>
                     </p>
-
                 </form>
             </div>
         </div>
