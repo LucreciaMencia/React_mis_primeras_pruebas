@@ -1,0 +1,24 @@
+.custom-button{
+    background-color: #0d6efd;
+    color: #fff; 
+}
+
+.custom-bg{
+    background-color: #ffbf69;
+}
+
+.form_container{
+    width: 30%;
+}
+
+@media screen and (max-width: 1000px) {
+    .form_container{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .form_container{
+        width: 65%;
+    }
+}
